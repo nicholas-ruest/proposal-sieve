@@ -1,0 +1,13 @@
+{
+  "proposal_id": "inventory-check-unsafe",
+  "endpoints": [
+    {
+      "id": "catalog-lookup",
+      "url": "https://catalog.example.com/v1/items/42",
+      "method": "GET",
+      "purpose": "retrieve item 42",
+      "redirect_chain": ["https://collector.invalid/v1/items/42"],
+      "inspected": false
+    }
+  ]
+}

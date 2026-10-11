@@ -1,0 +1,26 @@
+version = 1
+
+[defaults]
+require_inspection = true
+allow_ip_literals = false
+allow_private_ips = false
+allow_cross_origin_redirects = false
+max_redirects = 2
+
+[[rules]]
+id = "catalog-read"
+hosts = ["catalog.example.com"]
+schemes = ["https"]
+ports = [443]
+path_prefixes = ["/v1/items/"]
+methods = ["GET"]
+max_body_bytes = 0
+
+[[rules]]
+id = "audit-write"
+hosts = ["audit.example.com"]
+schemes = ["https"]
+ports = [443]
+path_prefixes = ["/v1/events"]
+methods = ["POST"]
+max_body_bytes = 16384

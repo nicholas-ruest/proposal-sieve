@@ -1,0 +1,20 @@
+{
+  "proposal_id": "inventory-check-42",
+  "endpoints": [
+    {
+      "id": "catalog-lookup",
+      "url": "https://catalog.example.com/v1/items/42",
+      "method": "GET",
+      "purpose": "retrieve item 42",
+      "inspected": true
+    },
+    {
+      "id": "audit-record",
+      "url": "https://audit.example.com/v1/events",
+      "method": "POST",
+      "purpose": "record the read receipt",
+      "body_bytes": 512,
+      "inspected": true
+    }
+  ]
+}
